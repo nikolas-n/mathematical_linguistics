@@ -1,0 +1,27 @@
+\makeatletter
+\newcommand*{\greek}[1]{%
+  \expandafter\@greek\csname c@#1\endcsname
+}
+\newcommand*{\@greek}[1]{%
+  $\ifcase#1\or\alpha '
+  \or\beta '
+  \or\gamma '
+  \or\delta '
+  \or\varepsilon '
+  \or\sigma\tau '
+  \or\zeta '
+  \or\eta '
+  \or\theta '
+  \or\iota '
+  \or\iota\alpha '
+  \or\iota\beta '
+  \or\iota\gamma '
+  \or\iota\delta '
+  \or\iota\varepsilon '
+  \or\iota\sigma\tau '
+  \or\iota\zeta 
+  \or\iota\eta 
+  \or\iota\theta 
+   \else\@ctrerr\fi$%
+}
+\makeatother
